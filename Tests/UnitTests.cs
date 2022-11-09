@@ -30,7 +30,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
         public void Subtract_Valid()
         {
             Assert.AreEqual(5, Program.Subtract("10", "5"));
@@ -38,6 +38,7 @@ namespace GithubActionsLab
             Assert.AreEqual(2, Program.Subtract("2", "0"));
         }
 
+        [Test]
         public void Subtract_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
@@ -45,6 +46,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
         }
 
+        [Test]
         public void Subtract_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
@@ -52,6 +54,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
         }
 
+        [Test]
         public void Multiply_Valid()
         {
             Assert.AreEqual(16, Program.Multiply("4", "4"));
@@ -59,6 +62,7 @@ namespace GithubActionsLab
             Assert.AreEqual(90, Program.Multiply("9", "10"));
         }
 
+        [Test]
         public void Multiply_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Multiply("a", "a"));
@@ -66,6 +70,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
         }
 
+        [Test]
         public void Multiply_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
@@ -73,6 +78,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
         }
 
+        [Test]
         public void Divide_Valid()
         {
             Assert.AreEqual(10, Program.Divide("100", "10"));
@@ -80,6 +86,7 @@ namespace GithubActionsLab
             Assert.AreEqual(1, Program.Divide("1", "1"));
         }
 
+        [Test]
         public void Divide_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Divide("a", "a"));
@@ -87,6 +94,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
         }
 
+        [Test]
         public void Divide_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, null));
@@ -94,6 +102,7 @@ namespace GithubActionsLab
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
         }
 
+        [Test]
         public void Power_Valid()
         {
             Assert.AreEqual(16, Program.Power("4", "4"));
@@ -101,6 +110,7 @@ namespace GithubActionsLab
             Assert.AreEqual(100, Program.Power("5", "20"));
         }
 
+        [Test]
         public void Power_Invalid()
         {
             Assert.Throws<FormatException>(() => Program.Power("a", "a"));
@@ -108,6 +118,7 @@ namespace GithubActionsLab
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
         }
 
+        [Test]
         public void Power_Null()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
